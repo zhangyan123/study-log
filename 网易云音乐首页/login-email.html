@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐 听见好时光</title>
+    <link href="favicon.jpg" rel="SHORTCUT ICON" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
+    <script type="text/javascript" src="js/my-pattern/mF_tbhuabao.js"></script>
+    <!--引入风格js文件-->
+    <link href="js/my-pattern/mF_tbhuabao.css" type="text/css" />
+    <!--引入风格css文件-->
+</head>
+<script type="text/javascript">
+    myFocus.set({
+        id: 'boxID', //焦点图盒子ID
+        pattern: 'mF_tbhuabao', //风格应用的名称
+        time: 2, //切换时间间隔(秒)
+        trigger: 'click', //触发切换模式:'click'(点击)/'mouseover'(悬停)
+        width: 980, //设置图片区域宽度(像素)
+        height: 304, //设置图片区域高度(像素)
+        txtHeight: 'default' //文字层高度设置(像素),'default'为默认高度，0为隐藏
+    });
+</script>
+<style media="screen">
+#sidebar-login #login-email{
+    display: block;
+  }
+</style>
+<body>
+    <div class="header">
+        <div class="head-wrap">
+            <div id="logo"></div>
+            <div class="top-nav">
+                <ul>
+                    <li><a href="javascript:void(0)">发现音乐</a></li>
+                    <li><a href="javascript:void(0)">我的音乐</a></li>
+                    <li><a href="javascript:void(0)">朋友</a></li>
+                    <li><a href="javascript:void(0)">下载客户端</a></li>
+                </ul>
+                <div id="hot-tag"></div>
+            </div>
+            <div class="search-wrap">
+                <input type="text" name="name" value="单曲/歌手/专辑/歌单/MV/用户">
+            </div>
+            <div id="top-login">
+                <div class="visible-top-login">
+                    <a id="top-login-home" href="login-home.html">登录</a>
+                    <div class="head-arrow"></div>
+                </div>
+                <div class="top-loign-hide">
+                    <ul>
+                        <li id="top-tel-login">
+                            <a href="login-tel.html">
+                                <i></i><span>手机号登录</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i style="background-position: -20px -20px;"></i><span>微信登录</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i style="background-position: -20px -40px;"></i><span>QQ登录</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i style="background-position: 0 -20px;"></i><span>新浪微博登录</span>
+                            </a>
+                        </li>
+                        <li id="top-email-login">
+                            <a href="login-email.html">
+                                <i style="background-position: 0 -40px;"></i><span>网易邮箱账号登录</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="top-login-hide-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-wrap">
+            <ul>
+                <li class="selected"><a href="javascript:void(0)" style="background: url('images/topbar.png') no-repeat left -268px;">推荐</a><span style="background: url('images/topbar.png') no-repeat right -268px;"></span></li>
+                <li><a href="javascript:void(0)">排行榜</a><span></span></li>
+                <li><a href="javascript:void(0)">歌单</a><span></span></li>
+                <li><a href="javascript:void(0)">主播电台</a><span></span></li>
+                <li><a href="javascript:void(0)">歌手</a><span></span></li>
+                <li><a href="javascript:void(0)">新碟上架</a><span></span></li>
+                <li style="height:0.1%;visibility:hidden"><span></span></li>
+            </ul>
+            <div id="nav-arrow"></div>
+        </div>
+    </div>
+    <div class="ad">
+        <div class="ad-wrap">
+
+            <div id="boxID">
+                <!--焦点图盒子-->
+                <div class="loading"><img src="images/loading.gif" alt="请稍候..." /></div>
+                <!--载入画面(可删除)-->
+                <div class="pic">
+                    <!--内容列表(li数目可随意增减)-->
+                    <ul>
+                        <li>
+                            <a href="####"><img src="images/pic01.jpg" thumb="" alt="" text="" /></a>
+                        </li>
+                        <li>
+                            <a href="####"><img src="images/pic02.jpg" thumb="" alt="" text="" /></a>
+                        </li>
+                        <li>
+                            <a href="####"><img src="images/pic03.jpg" thumb="" alt="" text="" /></a>
+                        </li>
+                        <li>
+                            <a href="####"><img src="images/pic04.jpg" thumb="" alt="" text="" /></a>
+                        </li>
+                        <li>
+                            <a href="####"><img src="images/pic05.jpg" thumb="" alt="" text="" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="download">
+                <a href="javascript:void(0)"></a>
+                <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+            </div>
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="left-content">
+            <div class="conten-wrap">
+                <div class="hits">
+                    <div class="hd">
+                        <a href="javascript:void(0)"><h1>热门推荐</h1></a>
+                        <ul>
+                            <li><a href="javascript:void(0)">华语</a></li>
+                            <li><a href="javascript:void(0)">流行</a></li>
+                            <li><a href="javascript:void(0)">摇滚</a></li>
+                            <li><a href="javascript:void(0)">民谣</a></li>
+                            <li style="border:none"><a href="javascript:void(0)">电子</a></li>
+                            <span>
+                				<a href="javascript:void(0)">更多</a>
+                				<i></i>
+                			</span>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                        <li class="content-li">
+                            <img src="images/109951162795129420.jpg" height="140" width="140">
+                            <a href="javascript:void(0)">
+                                <div class="mask-bottom">
+                                    <i class="ear"></i><span>100万</span><i class="play"></i>
+                                </div>
+                            </a>
+                            <p>任旋律轻抚你我初秋躁动的小情绪</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="new">
+                    <div class="hd">
+                        <a href="javascript:void(0)"><h1>新歌上架</h1></a>
+                        <span>
+                				<a href="javascript:void(0)">更多</a>
+                				<i></i>
+                			</span>
+                    </div>
+                    <div class="new-wrap">
+                        <ul>
+                            <li>
+                                <div class="cd-wrap">
+                                    <img src="images/3418381663464699.jpg" alt="" />
+                                    <a class="cd-mask" href="javascript:void(0)">
+                                        <a class="cd-play" href="javascript:void(0)"></a>
+                                    </a>
+
+                                </div>
+
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        屋塔房小公举
+                                    </p>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        朴海英
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cd-wrap">
+                                    <img src="images/3418381663464699.jpg" alt="" />
+                                    <a class="cd-mask" href="javascript:void(0)">
+                                        <a class="cd-play" href="javascript:void(0)"></a>
+                                    </a>
+                                </div>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        屋塔房小公举
+                                    </p>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        朴海英
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cd-wrap">
+                                    <img src="images/3418381663464699.jpg" alt="" />
+                                    <a class="cd-mask" href="javascript:void(0)">
+                                        <a class="cd-play" href="javascript:void(0)"></a>
+                                    </a>
+                                </div>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        屋塔房小公举
+                                    </p>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        朴海英
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cd-wrap">
+                                    <img src="images/3418381663464699.jpg" alt="" />
+                                    <a class="cd-mask" href="javascript:void(0)">
+                                        <a class="cd-play" href="javascript:void(0)"></a>
+                                    </a>
+                                </div>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        屋塔房小公举
+                                    </p>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        朴海英
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cd-wrap">
+                                    <img src="images/3418381663464699.jpg" alt="" />
+                                    <a class="cd-mask" href="javascript:void(0)">
+                                        <a class="cd-play" href="javascript:void(0)"></a>
+                                    </a>
+
+                                </div>
+
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        屋塔房小公举
+                                    </p>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <p>
+                                        朴海英
+                                    </p>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <a class="cd-next" href="javascript:void(0)"></a>
+                        <a class="cd-prev" href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="top10">
+                    <div class="hd">
+                        <a href="javascript:void(0)"><h1>榜单</h1></a>
+                        <span>
+                				<a href="javascript:void(0)">更多</a>
+                				<i></i>
+                			</span>
+                    </div>
+                    <div class="hot10-col">
+                        <div class="top-hd-wrap">
+                            <div class="top-hd">
+                                <img src="images/7744959906898786.jpg" height="80" width="80">
+                                <div class="top-hdr">
+                                    <a href="javascript:void(0)"><h3>云音乐飙升榜</h3></a>
+                                    <a class="top-hdp" href="javascript:void(0)"></a>
+                                    <a class="top-hdc" href="javascript:void(0)"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><span class="mark">1</span><span><a href="javascript:void(0)" title="呵护">呵护</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="mark">2</span><span><a href="javascript:void(0)" title="浪费">浪费</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="mark">3</span><span><a href="javascript:void(0)" title="芳草地">芳草地</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">4</span><span><a href="javascript:void(0)" title="不想上班">不想上班</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">5</span><span><a href="javascript:void(0)" title="相守">相守</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">6</span><span><a href="javascript:void(0)" title="卡带">卡带</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">7</span><span><a href="javascript:void(0)" title="加油歌">加油歌</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">8</span><span><a href="javascript:void(0)" title="红花雨">红花雨</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">9</span><span><a href="javascript:void(0)" title="皆非">皆非</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">10</span><span><a href="javascript:void(0)" title="往往">往往</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="more">查看更多&gt</a></li>
+                        </ul>
+                    </div>
+                    <div class="hot10-col">
+                        <div class="top-hd-wrap">
+                            <div class="top-hd">
+                                <img src="images/7808731581312441.jpg" height="80" width="80">
+                                <div class="top-hdr">
+                                    <a href="javascript:void(0)"><h3>云音乐新歌榜</h3></a>
+                                    <a class="top-hdp" href="javascript:void(0)"></a>
+                                    <a class="top-hdc" href="javascript:void(0)"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><span class="mark">1</span><span><a href="javascript:void(0)" title="呵护">呵护</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="mark">2</span><span><a href="javascript:void(0)" title="浪费">浪费</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="mark">3</span><span><a href="javascript:void(0)" title="芳草地">芳草地</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">4</span><span><a href="javascript:void(0)" title="不想上班">不想上班</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">5</span><span><a href="javascript:void(0)" title="相守">相守</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">6</span><span><a href="javascript:void(0)" title="卡带">卡带</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">7</span><span><a href="javascript:void(0)" title="加油歌">加油歌</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">8</span><span><a href="javascript:void(0)" title="红花雨">红花雨</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">9</span><span><a href="javascript:void(0)" title="皆非">皆非</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">10</span><span><a href="javascript:void(0)" title="往往">往往</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="more">查看更多&gt</a></li>
+                        </ul>
+                    </div>
+                    <div class="hot10-col">
+                        <div class="top-hd-wrap">
+                            <div class="top-hd">
+                                <img src="images/2902710698975677.jpg" height="80" width="80">
+                                <div class="top-hdr">
+                                    <a href="javascript:void(0)"><h3>网易原创歌曲榜</h3></a>
+                                    <a class="top-hdp" href="javascript:void(0)"></a>
+                                    <a class="top-hdc" href="javascript:void(0)"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><span class="mark">1</span><span><a href="javascript:void(0)" title="呵护">呵护</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="mark">2</span><span><a href="javascript:void(0)" title="浪费">浪费</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="mark">3</span><span><a href="javascript:void(0)" title="芳草地">芳草地</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">4</span><span><a href="javascript:void(0)" title="不想上班">不想上班</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">5</span><span><a href="javascript:void(0)" title="相守">相守</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">6</span><span><a href="javascript:void(0)" title="卡带">卡带</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">7</span><span><a href="javascript:void(0)" title="加油歌">加油歌</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">8</span><span><a href="javascript:void(0)" title="红花雨">红花雨</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">9</span><span><a href="javascript:void(0)" title="皆非">皆非</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><span class="normal">10</span><span><a href="javascript:void(0)" title="往往">往往</a></span>
+                                <div id="more-todo">
+                                    <a style="background: url('images/icon.png') no-repeat -43px -635px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat 4px -697px;" href="javascript:void(0)"></a>
+                                    <a style="background: url('images/icon.png') no-repeat -42px -84px;" href="javascript:void(0)"></a>
+                                </div>
+                            </li>
+                            <li><a href="javascript:void(0)" class="more">查看更多&gt;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="login">
+                <p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+                <div id="sidebar-login">
+                    <div class="sidebar-log-bt">
+                        <a href="login-home.html">用户登录</a>
+                    </div>
+                    <div class="login-module">
+                        <div id="login-home">
+                            <div class="sidebar-login-hd">
+                                <h3>登录</h3>
+                                <a href="index.html" class="close"></a>
+                            </div>
+                            <div class="login-content-wrap">
+                                <div class="login-content-left">
+                                    <div class="login-left-bg"></div>
+                                    <a id="sidebar-tel-login" class="blue-logbt" href="login-tel.html"><i>手机号登录</i></a>
+                                    <a id="sidebar-register" href="register.html"><i>注&nbsp;册</i></a>
+                                </div>
+                                <div class="login-content-right">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i style="background-position: -150px -670px;"></i>
+                                                <span>微信登录</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i style="background-position: -190px -670px;"></i>
+                                                <span>QQ登录</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i style="background-position: -230px -670px;"></i>
+                                                <span>微博登录</span>
+                                            </a>
+                                        </li>
+                                        <li id="login-home-email">
+                                            <a href="login-email.html">
+                                                <i style="background-position: -270px -670px;"></i>
+                                                <span>网易邮箱账号登录</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sidebar-login-foot">
+                                <a href="javascript:void(0)">腾讯微博登录&nbsp;&gt;</a>
+                            </div>
+                        </div>
+                        <div id="login-tel">
+                            <div class="sidebar-login-hd">
+                                <h3>手机号登录</h3>
+                                  <a href="index.html" class="close"></a>
+                            </div>
+                            <div class="login-tel-content">
+                                <input class="tel-input" type="text" name="name" value="请输入手机号">
+                                <input class="password-input" type="text" name="name" value="请输入密码">
+                                <div class="auto-login">
+                                    <input type="checkbox" name="name" value="">
+                                    <label for="auto-login">自动登录</label>
+                                </div>
+                                <div class="callback-password">
+                                    <a href="javascript:void(0)">忘记密码？</a>
+                                </div>
+                                <a class="blue-logbt" href="javascript:void(0)"><i>登&nbsp;录</i></a>
+                            </div>
+                            <div class="sidebar-login-foot">
+                                <a class="otherway-login" href="login-home.html">&lt; &nbsp;其他登录方式</a>
+                                <a id="free-register-link" href="register.html">没有账号？免费注册&nbsp; &gt;</a>
+                            </div>
+                        </div>
+                        <div id="register">
+                            <div class="sidebar-login-hd">
+                                <h3>手机号注册</h3>
+                                  <a href="index.html" class="close"></a>
+                            </div>
+                            <div class="register-content">
+                                <label for="tel">手机号：</label><br>
+                                <label id="tel-zoom" for="zoom">+86</label>
+                                <input class="tel-input" type="text" name="name" value="请输入手机号"><br>
+                                <label for="password">密码：</label><br>
+                                <input class="password-input" type="text" name="name" value="请设置密码，不少于6位">
+                                <a class="blue-logbt" href="javascript:void(0)"><i>下一步</i></a>
+                            </div>
+                            <div class="sidebar-login-foot">
+                                <a class="otherway-login" href="login-home.html">&lt; &nbsp;返回登录</a>
+                            </div>
+                        </div>
+                        <div id="login-email">
+                            <div class="sidebar-login-hd">
+                                <h3>邮箱登录</h3>
+                                <a href="index.html" class="close"></a>
+                            </div>
+                            <div class="login-email-content">
+                                <input class="tel-input" type="text" name="name" value="请输入手机号">
+                                <input class="password-input" type="text" name="name" value="请输入密码">
+                                <div class="auto-login">
+                                    <input type="checkbox" name="name" value="">
+                                    <label for="auto-login">自动登录</label>
+                                </div>
+                                <div class="callback-password">
+                                    <a href="javascript:void(0)">忘记密码？</a>
+                                </div>
+                                <a class="blue-logbt" href="javascript:void(0)"><i>登&nbsp;录</i></a>
+                            </div>
+                            <div class="sidebar-login-foot">
+                                <a class="otherway-login" href="login-home.html">&lt; &nbsp;其他登录方式</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="musician">
+                <h3>
+    				<span>入驻歌手</span>
+    				<a href="javascript:void(0)">查看全部&gt;</a>
+    			</h3>
+                <ul>
+                    <li>
+                        <img src="images/5931865232210340.jpg" height="64" width="64">
+                        <a href="javascript:void(0)">
+                            <h3>张惠妹aMEI</h3>
+                            <p>台湾歌手张惠妹</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/5931865232210340.jpg" height="62" width="62">
+                        <a href="javascript:void(0)">
+                            <h3>张惠妹aMEI</h3>
+                            <p>台湾歌手张惠妹</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/5931865232210340.jpg" height="62" width="62">
+                        <a href="javascript:void(0)">
+                            <h3>张惠妹aMEI</h3>
+                            <p>台湾歌手张惠妹</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/5931865232210340.jpg" height="62" width="62">
+                        <a href="javascript:void(0)">
+                            <h3>张惠妹aMEI</h3>
+                            <p>台湾歌手张惠妹</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/5931865232210340.jpg" height="62" width="62">
+                        <a href="javascript:void(0)">
+                            <h3>张惠妹aMEI</h3>
+                            <p>台湾歌手张惠妹</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="apply">
+                    <a href="javascript:void(0)">
+                        <p>申请成为网易音乐人</p>
+                    </a>
+
+                </div>
+            </div>
+            <div class="hot-dj">
+                <h3>
+    				<span>热门DJ</span>
+    			</h3>
+                <ul>
+                    <li>
+                        <img src="images/3368903628058175.jpg" height="40" width="40">
+                        <div class="person-dj">
+                            <a href="javascript:void(0)">
+                                <h3>阿鹏叔<span></span></h3>
+                            </a>
+                            <p>SOUND创始人</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/3368903628058175.jpg" height="40" width="40">
+                        <div class="person-dj">
+                            <a href="javascript:void(0)">
+                                <h3>阿鹏叔<span></span></h3>
+                            </a>
+                            <p>SOUND创始人</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/3368903628058175.jpg" height="40" width="40">
+                        <div class="person-dj">
+                            <a href="javascript:void(0)">
+                                <h3>阿鹏叔<span></span></h3>
+                            </a>
+                            <p>SOUND创始人</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/3368903628058175.jpg" height="40" width="40">
+                        <div class="person-dj">
+                            <a href="javascript:void(0)">
+                                <h3>阿鹏叔<span></span></h3>
+                            </a>
+                            <p>SOUND创始人</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/3368903628058175.jpg" height="40" width="40">
+                        <div class="person-dj">
+                            <a href="javascript:void(0)">
+                                <h3>阿鹏叔<span></span></h3>
+                            </a>
+                            <p>SOUND创始人</p>
+                        </div>
+                    </li>
+            </div>
+        </div>
+        <a id="back" href="#"></a>
+    </div>
+    <div class="footer">
+        <div class="foot-wrap">
+            <ul>
+                <li style="width:228px;margin-right: 68px;">
+                    <span class="img1"></span>
+                    <a href="javascript:void(0)">
+                        <p>独立音乐人招募计划</p>
+                    </a>
+
+                    <p>加入我们 即将与超过亿万乐迷互动</p>
+                </li>
+                <li style="width:228px;margin-right: 68px;">
+                    <span class="img2"></span>
+                    <a href="javascript:void(0)">
+                        <p>独立音乐人招募计划</p>
+                    </a>
+
+                    <p>加入我们 即将与超过亿万乐迷互动</p>
+                </li>
+                <li style="width:380px;">
+                    <p>
+                        <a href="javascript:void(0)">关于网易</a>-<a href="javascript:void(0)">客户服务</a>-<a href="javascript:void(0)">服务条款</a> -
+                        <a href="javascript:void(0)">网站导航</a>网易公司版权所有@1997-2016 杭州网易雷火科技有限公司运营:
+                        <a href="javascript:void(0)">浙网文[2016]0155-055号</a><i></i><a href="javascript:void(0)">  反馈意见</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+/*=========mF_tbhuabao========*/
+
+.mF_tbhuabao {
+    background: #ddd;
+    overflow: visible;
+    margin-left: 10px;
+}
+
+.mF_tbhuabao .pic,
+.mF_tbhuabao .pic ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+ 	height: 100%
+    width: 726px;
+}
+
+.mF_tbhuabao .pic li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 726px;
+    height: 100%
+}
+
+.mF_tbhuabao .txt li {
+    position: absolute;
+    z-index: 2;
+    width: 726px;
+    height: 38px;
+    line-height: 38px;
+    display: none;
+}
+
+
+/*默认标题高度*/
+
+.mF_tbhuabao .txt li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*标题样式*/
+
+/*.mF_tbhuabao .txt li b {
+    display: block;
+    height: 32px;
+    width: 730px;;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background: #000;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}*/
+
+.mF_tbhuabao .dot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    line-height: 28px;
+    width: 726px;
+    text-align: center;
+}
+
+.mF_tbhuabao .dot li {
+    display: inline;
+    margin: 0 3px;
+}
+
+.mF_tbhuabao .dot li a {
+    color: #999;
+    font-size: 26px;
+    text-decoration: none;
+    -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -o-transition: color 0.4s;
+}
+
+.mF_tbhuabao .dot li.current a {
+    color: #f60;
+}
+
+.mF_tbhuabao .prev,
+.mF_tbhuabao .next {
+    font: 700 53px/58px arial;
+    width: 37px;
+    height: 65px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 4;
+    left: -40px;
+    cursor: pointer;
+    
+}
+
+.mF_tbhuabao .next {
+    left: auto;
+    right: -40px;
+}
+
+.mF_tbhuabao .prev a,
+.mF_tbhuabao .next a {
+    display: block;
+    color: #bbb;
+    text-align: center;
+    text-decoration: none;
+}
+
+.mF_tbhuabao .prev a:hover,
+.mF_tbhuabao .next a:hover {
+   background: url(img/mF_tbhuabao/btn-bg.gif) no-repeat;
+}
