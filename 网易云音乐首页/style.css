@@ -242,7 +242,6 @@ height:257px;
 .blue-logbt{
   clear:both;
   display: block;
-
   width:200px;
   height:31px;
   background: url("images/button2.png") no-repeat right -428px;
@@ -835,24 +834,36 @@ margin: 20px 0 0 -35px;
     border: 1px solid #ccc;
     margin-top: 20px;
     padding:20px 20px 20px 20px;
-}
-.new-wrap #male{
-    display: none;
-}
-.new-wrap ul{
+    overflow: hidden;
 
-  width:645px;
+}
+
+.new-wrap #male{
+margin-left: 25px;
+}
+/*.new-wrap #famale{
+  margin-right:0px;
+}*/
+.new-wrap ul{
+  display: inline-block;
+}
+
+.new-wrap .new-wrap-list{
+position: relative;
+left:0px;
+  width:1500px;
   height:135px;
   padding-top: 13px;
   padding-left: 12px;
 
 }
 .new-wrap ul li{
+
   display: inline-block;
   position: relative;
-
   width:125px;
   height:136px;
+  padding-bottom: 22px;
   /*border:1px solid black;*/
 
 }
