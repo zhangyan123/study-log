@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>外边距叠加问题</title>
+</head>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+	.wrap{
+		width:800px;
+		height:500px;
+		border:1px solid red;
+		margin:0 auto;
+		
+		color:white;
+	}
+	.box1{
+		/*float: left;*/
+		/*display:inline-block;*/
+		width:200px;
+		height:200px;
+		margin:25px;
+		background:red;
+		text-align: center;
+	}
+	.box2{
+		/*float:left;*/
+		/*position: absolute;*/
+		/*overflow: hidden;*/
+		/*display:inline-block;*/
+		/*	border:1px solid transparent;*/
+		/*padding:25px;*/
+		width:200px;
+		height:200px;
+		margin:25px;
+		background:blue;
+		text-align: center;
+	}
+	.box2 p{
+		
+		/*margin:25px;*/
+		width:100px;
+		height:100px;	
+		background:green;
+	}
+	.box2 .p-wrap{
+       /* padding:25px;*/
+     /*  border:1px solid transparent;*/
+		width:100px;
+		height:100px;
+	}
+</style>
+<body>
+<div class="wrap">
+
+		<div class="box1">box1</div>
+		<div class="box2"><div class="p-wrap"><p>box2</p></div></div>
+</div>	
+</body>
+</html>

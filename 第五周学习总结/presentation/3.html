@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>把margin设为auto,把定宽的块元素水平居中显示</title>
+	<style type="text/css">
+	/* 1. 把margin设为auto
+	
+	具体来说就是把要居中的元素的margin-left和margin-right都设为auto，此方法只能进行水平的居中，且对浮动元素或绝对定位元素无效。
+	
+	2、使用 text-align:center
+	
+	这个没什么好说的，只能对图片，按钮，文字等行内元素(display为inline或inline-block等)进行水平居中。但要说明的是在IE6、7这两个奇葩的浏览器中，它是能对任何元素进行水平居中的。
+	
+	3、使用line-height让单行的文字垂直居中
+	
+	把文字的line-height设为文字父容器的高度，适用于只有一行文字的情况。 */
+	*{
+		margin:0;
+		padding:0;
+	}
+		.box{
+			width:200px;
+			height:200px;
+			margin:0 auto;/* 定宽水平居中最常用方式（相对于父元素居中，float属性会破坏这一布局） */
+			background: red;
+		}
+		.box p{
+			height:200px;
+			line-height: 200px;/* //行距与行高相等完成单行垂直居中 */
+			text-align: center;/* //内联元素行内居中显示 */
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box"><p>把margin设为auto</p></div>
+	</div>
+</body>
+</html>

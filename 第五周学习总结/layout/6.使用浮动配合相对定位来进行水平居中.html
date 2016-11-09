@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>不需知道宽高情况下，浮动配合相对定位显示居中显示</title>
+	<style type="text/css">
+	
+	*{
+		margin:0;
+		padding:0;
+	}
+	.wrap{
+		position:relative;
+		/*float: left;*/
+		left:50%;
+		
+		width:200px;
+		height:200px;
+		border:1px solid red;
+	}
+	.box{
+		height:150px;
+		width: 150px;
+		left:-50%;
+
+		position:absolute;
+		background: red;
+		
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box"><p>这只是一行文字</p></div>
+	</div>
+</body>
+</html>

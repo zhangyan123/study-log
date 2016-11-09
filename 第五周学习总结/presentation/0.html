@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒模型</title>
+	<style type="text/css">
+	ul,li{
+		list-style-type: none;
+	}
+	.box-wrap{
+
+		clear:left;
+		width:500px;
+		height:500px;
+		/* line-height:500px; */
+		margin-left:10px;
+		margin-top: 10px;
+		border:1px dotted #ccc;
+		box-shadow: 3px 3px 3px #ccc;
+		float:left;
+		width:1200px;
+	}
+	.block{
+		/*display:inline-block;*/
+		/*float:left;*/
+		width:150px;
+		height:130px;
+		padding:18px;
+		margin:25px;
+		line-height:50px;
+		border:2px solid black;
+		background: red;
+		/*vertical-align: middle;*/
+		/*vertical-align: text-bottom;*/
+	}
+	.inline{
+		/*display:block;*/
+		/*display:inline-block;*/
+		/*float:left;*/
+		text-indent: 15px;
+		text-align: right;
+		width:150px;
+		height:130px;
+		padding:18px;
+		margin:25px;
+		/*line-height:50px;*/
+		border:2px solid black;
+		/*vertical-align: middle;*/
+		/*vertical-align: text-bottom;*/
+		/*background:#F29F9F;*/
+	}
+	/* .img{
+		display:block;
+		display:inline-block;
+		float:left;
+		width:200px;
+		height:150px;
+		padding:18px;
+		margin:25px;
+		line-height:50px;
+		border:2px solid black;
+		vertical-align: middle;
+		vertical-align: text-bottom;
+		background:#F29F9F;
+	} */
+	.box img{
+		margin-top: 10px;
+		padding-left:11px; 
+		float:left;
+		width: 600px;
+		height:300px;
+	}
+	.boxs-wrap{
+		padding-bottom: 20px;
+	}
+
+	.intro{
+		padding-left: 50px;
+		font-size: 14px;
+		float:left;
+		line-height: 25px;
+	}
+	.intro h2{
+
+		font-size: 14px;
+		font-weight: bold;
+		margin:0;
+		padding:0;
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="boxs-wrap">
+	<div class="box"><img src="../images/标准盒子.jpg"></div>
+	<div class="box"><img src="../images/IE盒子.jpg"></div>
+	</div>
+	<div class="box-wrap">
+	
+	<p class="block">
+	块级元素
+    </p>
+	<span class="inline">
+	内联元素
+	</span>
+	<!-- <img class="img" src="../images/list.ico"> -->
+	</div>
+	
+	<div class="intro">
+	<div class="box"><img src="../images/3D盒模型.png" height="557" width="923" ></div>
+	<ul>
+		   <li><h2>块级元素：</h2>
+				<ul>
+					<li>每个块级元素都从新的一行开始，并且其后的元素也另起一行;</li>
+					<li>元素的高度、宽度、行高以及四个方向的内外边距可设置;</li>
+					<li>不定宽，则宽是父容器的100%。</li>
+				</ul>
+			</li>
+			<li><h2>内联元素特点：</h2>
+				<ul>
+					<li>和其他元素都在一行上；</li>
+					<li>元素的高度、宽度、顶部和底部内外边距均不可设置；</li>
+					<li>元素的宽度就是它包含的文字或图片的宽度。</li>
+				</ul>
+			</li>
+			
+		</ul></div>
+
+</body>
+</html>

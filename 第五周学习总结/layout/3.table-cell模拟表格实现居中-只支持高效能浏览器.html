@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>table-cell模拟表格显示居中布局</title>
+	<style type="text/css">
+	
+	*{
+		margin:0;
+		padding:0;
+	}
+
+	.wrap{
+		width:500px;
+		height:500px;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		border:1px solid red;
+	}
+	.box{
+		width:150px;
+		height:150px;
+		display: inline-block;
+		background:red;
+	}
+	.box p{
+		height:150px;
+		line-height: 150px;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box"><p>这只是一行文字</p></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>已知宽高情况下，使用绝对定位实现元素居中显示</title>
+	<style type="text/css">
+	
+	.wrap{
+		margin:0 auto;
+		position:relative;
+		width:200px;
+		height:200px;
+		border:1px solid red;
+	}
+	.box{
+		width:120px;
+		height:120px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin:-60px 0 0 -60px;
+		background: red;
+	}
+	.box p{
+		text-align: center;
+		width: 120px;
+		height:120px;
+		line-height: 120px;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box"><p>4.绝对定位①</p></div>
+	</div>
+</body>
+</html>

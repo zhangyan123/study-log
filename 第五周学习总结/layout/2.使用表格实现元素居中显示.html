@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>使用表格实现元素居中显示</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+		table{
+			margin:0 auto;  /*设置最外层相对于视窗*/
+		}
+		.wrap{
+			
+			width:200px;/* td设置内容的宽高撑起板块 */
+			height:200px;
+			text-align: center;/*td设置内容水平居中的布局*/
+			vertical-align: middle;/*td设置垂直内容居中的布局*/
+			border:1px solid red;
+		}
+		.box{
+			display: inline-block;/*在ie8+以及chrome、firefox等浏览器中的text-align:center对块状元素无效*/
+			height:100px;
+			width:100px;
+			background: red;
+		}
+		
+	</style>
+</head>
+<body>
+	<table >
+		<tr>
+			<td class="wrap">
+				<div class="box"></div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
