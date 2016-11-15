@@ -1,0 +1,32 @@
+#rowH{
+  position: relative;
+}
+ul .nav-tags{
+  position: absolute;
+  left:0;
+  width: 600px;
+}
+#info-search{
+  height:100%;
+  position: absolute;
+  bottom: 5px;
+  right:0;
+  width:500px;
+}
+#info-search :first-child{
+  color:#878784;
+}
+.container-fluid{
+  margin-top: 30px;
+}
+.table-container{
+  position:absolute;
+  top:0;
+  margin-top:-2px;
+}
+.btnStyle{
+  height:28px;
+}
+.hide{
+  display:hidden;
+}
