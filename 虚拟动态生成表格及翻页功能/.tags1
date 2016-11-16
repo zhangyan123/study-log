@@ -4,11 +4,43 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-#rowH	/Users/zhangyan/Desktop/practice/css/user.css	/^#rowH{$/;"	function	line:1
-ul .nav-tags	/Users/zhangyan/Desktop/practice/css/user.css	/^ul .nav-tags{$/;"	function	line:4
-#info-search	/Users/zhangyan/Desktop/practice/css/user.css	/^#info-search{$/;"	function	line:9
-#info-search :first-child	/Users/zhangyan/Desktop/practice/css/user.css	/^#info-search :first-child{$/;"	function	line:16
-.container-fluid	/Users/zhangyan/Desktop/practice/css/user.css	/^.container-fluid{$/;"	function	line:19
-.table-container	/Users/zhangyan/Desktop/practice/css/user.css	/^.table-container{$/;"	function	line:22
-.btnStyle	/Users/zhangyan/Desktop/practice/css/user.css	/^.btnStyle{$/;"	function	line:27
-.hide	/Users/zhangyan/Desktop/practice/css/user.css	/^.hide{$/;"	function	line:30
+page.operater	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^var page = {$/;"	property	line:1
+page.operater2	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    operater: "<button type='button' class='btn btn-primary 'rel='manualMbtn' data-toggle='modal' data-target='#myModal'>点击查看<\/button>",$/;"	property	line:2
+page.pageCount	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    operater2: "<button type='button' class='btn btn-primary 'rel='manualMbtn2' data-toggle='modal' data-target='#myModal'>点击修改<\/button>",$/;"	property	line:3
+page.rowsCount	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    pageCount: 1,$/;"	property	line:4
+page.rowsLimit	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    rowsCount: 0,$/;"	property	line:5
+page.curTableNum	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    rowsLimit: 1,$/;"	property	line:7
+initEvent	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function initEvent() {$/;"	function	line:18
+initEvent	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function initEvent() {$/;"	function	line:18
+getSelectedRowsLimit	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function getSelectedRowsLimit() {$/;"	function	line:27
+getSelectedRowsLimit	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function getSelectedRowsLimit() {$/;"	function	line:27
+pageNumClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function pageNumClick(oldPageIndex) {$/;"	function	line:36
+pageNumClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function pageNumClick(oldPageIndex) {$/;"	function	line:36
+prevNextClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function prevNextClick() {$/;"	function	line:70
+prevNextClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function prevNextClick() {$/;"	function	line:70
+rModalbtnClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function rModalbtnClick() {$/;"	function	line:106
+eachMap	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^            eachMap(dataObj, function(value) {$/;"	function	line:118
+rModalbtnClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function rModalbtnClick() {$/;"	function	line:106
+wModalbtnClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function wModalbtnClick() {$/;"	function	line:132
+wModalbtnClick	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function wModalbtnClick() {$/;"	function	line:132
+tableChange	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function tableChange() {$/;"	function	line:164
+tableChange	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function tableChange() {$/;"	function	line:164
+topSearchInput	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function topSearchInput() {$/;"	function	line:184
+topSearchInput	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function topSearchInput() {$/;"	function	line:184
+newTable	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function newTable(oldTbody, data, operater, operater2) {$/;"	function	line:200
+eachMap	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    eachMap(data, function(item) {$/;"	function	line:205
+newTable	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function newTable(oldTbody, data, operater, operater2) {$/;"	function	line:200
+renderTr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function renderTr(data, operater, operater2) {$/;"	function	line:230
+eachMap	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    eachMap(data, function(item) {$/;"	function	line:233
+renderTr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function renderTr(data, operater, operater2) {$/;"	function	line:230
+eachMap	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function eachMap(obj, callback) {$/;"	function	line:253
+eachMap	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function eachMap(obj, callback) {$/;"	function	line:253
+getType	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function getType(target) {$/;"	function	line:267
+return	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function getType(target) {$/;"	class	line:267
+return.toString	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    return Object.prototype.toString.apply(target).slice(8, -1).toLowerCase();$/;"	method	line:268
+getType	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function getType(target) {$/;"	function	line:267
+createPageTag	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function createPageTag() {$/;"	function	line:273
+createPageTag	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function createPageTag() {$/;"	function	line:273
+objToArr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function objToArr(obj) {$/;"	function	line:288
+eachMap	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^    eachMap(obj, function(value) {$/;"	function	line:292
+objToArr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/js/teacher-map.js	/^function objToArr(obj) {$/;"	function	line:288
