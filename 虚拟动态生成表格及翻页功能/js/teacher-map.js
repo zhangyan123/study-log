@@ -3,23 +3,29 @@ var page = {
   pageCount:1,
   rowsCount:0,
   // lastPageRows:0,
-  rowsLimit:2,
-  curTableNum:1//默认首先展示第一个表的内容
+  rowsLimit:1,
+  curTableNum:1,//默认首先展示第一个表的内容
 };
 $(function() {
     // $("table[id=table"+page.curTableNum+"]").siblings('table').hide();
-    tagChange();
+    tableChange();
     topSearchInput();
     newTable($("table[id=table"+page.curTableNum+"]"+" tbody"),res[page.curTableNum-1], page.operater);
 });
 /**
  * 翻页效果实现
  */
- function pageChange(){
-   var curTagNum=1;
+ function pageNumClick(oldPageIndex){
    var pageTagGroup =$("#pageTag");
+   var tagNum = pageTagGroup.children(":not(:first,:last)");
+   var curTagNum;
+   if(oldPageIndex){
+     curTagNum=oldPageIndex;
+     tagNum.eq(curTagNum).trigger('click');
+   }
+
     // 添加页码点击事件
-    pageTagGroup.children(":not(:first,:last)").each(function(i,tag){
+  tagNum.each(function(i,tag){
         $(tag).click(function(){
         // 取当前页码
         curTagNum =i+1;
@@ -34,8 +40,32 @@ $(function() {
         //处理只显示需要行
         $showTrs.show();
         $hideTrs.hide();
+        pageTagGroup.children('button').removeClass('active');
+        $(this).addClass('active');
         });
     });
+    prevClick();
+ }
+ /**
+  * 位prev按钮添加点击事件
+  */
+ function prevClick(){
+   
+  var $prev =  pageTagGroup.find(':first');
+   var oldPagIndex=1;
+    var pageTagGroup =$("#pageTag");
+    //寻找当前页码
+     pageTagGroup.children(":not(:first,:last)").each(function(i,tag){
+       var judge = $(tag).hasClass('active');
+       if(judge){
+       oldPageIndex=i;
+       }
+     });
+    if(oldPageIndex>1){
+        pageNumClick(oldPageIndex);
+    }else{
+      return;
+    }
  }
 /**
  * 为每行按钮添加模态框内容
@@ -62,7 +92,7 @@ function addModalEvent() {
 /**
  * 信息表格切换效果
  */
-function tagChange() {
+function tableChange() {
     var nav = $("ul.nav li");
     var tables = $("#table-container table");
     var tableContainer = $("#table-container");
@@ -119,8 +149,9 @@ function newTable(oldTbody,data,operater) {
    var $showTrs =newTrs.filter(":lt("+(page.rowsLimit)+")");
    $showTrs.show();
    createPageTag();
-   pageChange();
+   pageNumClick();
    addModalEvent();
+
 }
 /**
  * 将每一位老师的信息添加进一行并返回行
@@ -175,4 +206,5 @@ function getType(target) {
          var $button = "<button type='button' class='btn btn-default'>"+i+"</button>";
          nextTag.before($($button));
        }
+     $("#pageTag").find(":eq(1)").addClass('active');
  }
