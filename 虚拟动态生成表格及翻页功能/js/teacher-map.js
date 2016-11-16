@@ -25,7 +25,8 @@ function initEvent() {
  * 根据下拉列表选择控制每页行数
  */
 function getSelectedRowsLimit() {
-    $("select[rel=rows]").change(function() {
+
+      $("select[rel=rows]").change(function() {
         page.rowsLimit = $(this).val();
         newTable($("table[id=table" + page.curTableNum + "]" + " tbody"), res[page.curTableNum - 1], page.operater, page.operater2);
     });
@@ -44,6 +45,7 @@ function pageNumClick(oldPageIndex) {
 
     // 添加页码点击事件
     tagNum.each(function(i, tag) {
+      $(tag).unbind("click");
         $(tag).click(function() {
             // 取当前页码
             curTagNum = i + 1;
@@ -52,9 +54,9 @@ function pageNumClick(oldPageIndex) {
             // 获取新建表格的所有行tr
             var newTrs = $("table[id=table" + page.curTableNum + "] tbody").children('tr');
             // 获取需展示行
-            var $showTrs = newTrs.filter(":gt(" + (curPStartRNum - 1) + "),:lt(" + (curPStartRNum + page.rowsLimit) + ")");
+            var $showTrs = newTrs.filter(":gt(" + (Number(curPStartRNum) - 1) + "),:lt(" + (Number(curPStartRNum)+Number(page.rowsLimit)) + ")");
             // 获取隐藏行
-            var $hideTrs = newTrs.filter(":lt(" + curPStartRNum + "),:gt(" + (curPStartRNum + page.rowsLimit - 1) + ")");
+            var $hideTrs = newTrs.filter(":lt(" + Number(curPStartRNum) + "),:gt(" + (Number(curPStartRNum)+Number(page.rowsLimit)-1) + ")");
             //处理只显示需要行
             $showTrs.show();
             $hideTrs.hide();
@@ -198,8 +200,9 @@ function topSearchInput() {
  * 根据传入数据res创建新表格并返回tbody
  */
 function newTable(oldTbody, data, operater, operater2) {
-    page.pageCount = 1; //页面总数
+
     page.rowsCount = 0; //新表格总行数统计
+    page.pageCount = Math.ceil(page.rowsCount/page.rowsLimit); //页面总数
     // page.lastPageRows=0;//新表格最后一页行数统计
     var $tbody = $("<tbody></tbody>");
     eachMap(data, function(item) {
