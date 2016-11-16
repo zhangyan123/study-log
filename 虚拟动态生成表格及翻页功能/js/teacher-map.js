@@ -4,10 +4,12 @@ var page = {
   rowsCount:0,
   // lastPageRows:0,
   rowsLimit:1,
-  curTableNum:1,//默认首先展示第一个表的内容
+  curTableNum:1//默认首先展示第一个表的内容
+  // oldPageIndex:0
 };
 $(function() {
     // $("table[id=table"+page.curTableNum+"]").siblings('table').hide();
+    prevNextClick();
     tableChange();
     topSearchInput();
     newTable($("table[id=table"+page.curTableNum+"]"+" tbody"),res[page.curTableNum-1], page.operater);
@@ -19,7 +21,7 @@ $(function() {
    var pageTagGroup =$("#pageTag");
    var tagNum = pageTagGroup.children(":not(:first,:last)");
    var curTagNum;
-   if(oldPageIndex){
+   if(typeof oldPageIndex!==undefined){
      curTagNum=oldPageIndex;
      tagNum.eq(curTagNum).trigger('click');
    }
@@ -44,31 +46,46 @@ $(function() {
         $(this).addClass('active');
         });
     });
-    prevClick();
+
  }
  /**
-  * 位prev按钮添加点击事件
+  * 位prev和next按钮添加点击事件
   */
- function prevClick(){
-   
-  var $prev =  pageTagGroup.find(':first');
-   var oldPagIndex=1;
-    var pageTagGroup =$("#pageTag");
-    //寻找当前页码
-     pageTagGroup.children(":not(:first,:last)").each(function(i,tag){
-       var judge = $(tag).hasClass('active');
-       if(judge){
-       oldPageIndex=i;
-       }
-     });
-    if(oldPageIndex>1){
-        pageNumClick(oldPageIndex);
-    }else{
-      return;
-    }
+ function prevNextClick(){
+     var pageTagGroup =$("#pageTag");
+     var $prev =  pageTagGroup.find(':first');
+     var $next = pageTagGroup.find(":last");
+     var oldPageIndex=0;
+     //寻找当前页码
+
+       $prev.click(function(){
+         pageTagGroup.children(":not(:first,:last)").each(function(i,tag){
+           var judge = $(tag).hasClass('active');
+           if(judge){
+           oldPageIndex=i;
+           }
+         });
+         if(oldPageIndex>0){
+           oldPageIndex--;
+             pageNumClick(oldPageIndex);
+         }
+       });
+       $next.click(function() {
+         pageTagGroup.children(":not(:first,:last)").each(function(i,tag){
+           var judge = $(tag).hasClass('active');
+           if(judge){
+           oldPageIndex=i;
+           }
+         });
+         if(oldPageIndex<page.pageCount){
+           oldPageIndex++;
+             pageNumClick(oldPageIndex);
+         }
+       });
+
  }
 /**
- * 为每行按钮添加模态框内容
+ * 为每行按钮添加只读模态框内容
  */
 function addModalEvent() {
     var Mbtn = $("button[rel=manualMbtn]"); //找到动态添加的模态框按钮
@@ -109,7 +126,7 @@ function tableChange() {
 
 }
 /**
- * 搜索框效果
+ * 搜索框响应效果
  */
 function topSearchInput() {
     var search = $("#info-search").children('[type=text]');
