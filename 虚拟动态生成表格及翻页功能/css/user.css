@@ -30,3 +30,6 @@ ul .nav-tags{
 .hide{
   display:hidden;
 }
+.container-fluid{
+  min-width: 1000px;
+}
