@@ -36,11 +36,22 @@
 <!--begin第一行第二列-->
       <!-- <div class=""> -->
 <!-- input-group -->
-        <div class="input-group col-xs-3" id="info-search">
-          <input type="text" class="form-control" value="搜搜"/>
-          <span class="input-group-btn">
-          <button class="btn" type="button" >查询</button>
+        <div class="col-xs-8" id="info-search">
+          <div class="form-group">
+         <div class="input-group col-xs-12">
+         <div class="input-group-btn">
+            <select name="type" class="form-control" style="width: auto;" id="searchSelect">
+                <option value="teacherName">教师姓名</option>
+                <option value="schoolName">所在学校</option>
+                <option value="signinTime">注册时间</option>
+            </select>
+        </div>
+        <input type="text" name="keyword" id="keyword" class="form-control" value="输入关键字">
+        <span class="input-group-btn">
+            <button class="btn" id="search_submit" type="submit" >搜索</button>
         </span>
+    </div>
+</div>
         </div>
 
 <!-- /input-group -->

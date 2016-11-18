@@ -5,8 +5,9 @@ var page = {
     rowsCount: 0,
     // lastPageRows:0,
     rowsLimit: 1,
-    curTableNum: 1 //默认首先展示第一个表的内容
+    curTableNum: 1, //默认首先展示第一个表的内容
         // oldPageIndex:0
+    searchInfo:[[["教师姓名","所在学校","注册时间"],["teacherName","schoolName","signinTime"],["example:田媛","example:华中师范大学","example:2016-7-1"]],[["教师姓名","所在学校","注册时间"],["teacherName","schoolName","signinTime"],["example:田媛","example:华中师范大学","example:2016-7-1"]],[["教师姓名","所在学校","注册时间"],["teacherName","schoolName","signinTime"],["example:田媛","example:华中师范大学","example:2016-7-1"]]]
 };
 $(function() {
     newTable($("table[id=table" + page.curTableNum + "]" + " tbody"), res[page.curTableNum - 1], page.operater, page.operater2);
@@ -184,15 +185,15 @@ function tableChange() {
  * 搜索框响应效果
  */
 function topSearchInput() {
-    var search = $("#info-search").children('[type=text]');
+    var search = $("#keyword");
     search
         .focus(function() {
-            if (search.attr("value") === "搜搜")
+            if (search.attr("value") === "输入关键字")
                 search.attr('value', '');
         })
         .blur(function() {
             if (search.attr("value") === '') {
-                search.attr('value', "搜搜");
+                search.attr('value',"输入关键字");
             }
         });
 }
