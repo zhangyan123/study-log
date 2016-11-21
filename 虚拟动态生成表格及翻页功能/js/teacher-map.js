@@ -4,7 +4,7 @@ var page = {
     pageCount: 1,
     rowsCount: 0,
     // lastPageRows:0,
-    rowsLimit: 1,
+    rowsLimit: 4,
     curTableNum: 1, //默认首先展示第一个表的内容
         // oldPageIndex:0
     searchInfo:
@@ -38,11 +38,78 @@ function initEvent() {
     tableChange();
     topSearchInput();
     getSelectedRowsLimit();
+    bindThSortEvent();
       $("#keyword").attr("placeholder",$("#searchSelect :selected").attr("example"));
-      $("#table-container th").click(function(){
-        $(this).find("a span").toggleClass("glyphicon glyphicon-chevron-up");
-          $(this).find("a span").toggleClass("glyphicon glyphicon-chevron-down");
+
+}
+/**
+ * 绑定th点击触发的排序事件
+ */
+function bindThSortEvent(){
+  var ths=  $("#table-container th");
+
+      /**
+       * 增加表头点击事件
+       */
+      ths.click(function(){
+        //获取排序要求
+        var sortflag=$(this).find("a span").filter("[class*=up]").length;//箭头向上，表示未排序或反向排序
+
+        /**
+         * 增加字形图标toggle效果
+         */
+      $(this).find("a span").toggleClass("glyphicon glyphicon-chevron-up");
+      $(this).find("a span").toggleClass("glyphicon glyphicon-chevron-down");
+      /**
+       * 增加排序toggle事件
+       */
+      var thIndex =$(this).index();
+      // var thSortType = $(this).attr("type");
+      //创建一个数组用来缓存正在处理的数据
+      var tempArray=[];
+      //获取当前表格的所有tr
+      var curTrs = $("table[id=table" + page.curTableNum + "]" + " tbody tr");
+      curTrs.each(function(index,value){
+        var curTds = $(value).find("td");
+        curTds.each(function(index,curTd){
+          if(index===thIndex){
+            tempArray.push($(curTds[index]).html()+".separator"+$(this).parent("tr").html());
+          }
+        });
       });
+      //根据新数组第一项大小实现新数组排序
+      if(sortflag===1){
+        for(var i=0;i<tempArray.length;i++){
+
+                for(var j=i+1;j<tempArray.length;j++){
+                  if(tempArray[i].split(".separator")[0]-tempArray[j].split(".separator")[0]<0){
+                    var temp=tempArray[i];
+                    tempArray[i]=tempArray[j];
+                    tempArray[j]=temp;
+                  }
+                }
+
+            }
+      }else{
+         for(var i=0;i<tempArray.length;i++){
+
+                for(var j=i+1;j<tempArray.length;j++){
+                  if(tempArray[i].split(".separator")[0]-tempArray[j].split(".separator")[0]){
+                    var temp=tempArray[i];
+                    tempArray[i]=tempArray[j];
+                    tempArray[j]=temp;
+                  }
+                }
+
+            }
+      }
+
+    //用新数组中的行数据替换掉原来表格的数据
+     for (var i = 0; i <curTrs.length; i++) {
+          curTrs.eq(i).html(tempArray[i].split(".separator")[1]);
+        }
+
+  });
 }
 /**
  * 根据下拉列表选择控制每页行数
