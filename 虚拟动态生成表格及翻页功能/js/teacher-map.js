@@ -7,7 +7,24 @@ var page = {
     rowsLimit: 1,
     curTableNum: 1, //默认首先展示第一个表的内容
         // oldPageIndex:0
-    searchInfo:[[["教师姓名","所在学校","注册时间"],["teacherName","schoolName","signinTime"],["example:田媛","example:华中师范大学","example:2016-7-1"]],[["教师姓名","所在学校","注册时间"],["teacherName","schoolName","signinTime"],["example:田媛","example:华中师范大学","example:2016-7-1"]],[["教师姓名","所在学校","注册时间"],["teacherName","schoolName","signinTime"],["example:田媛","example:华中师范大学","example:2016-7-1"]]]
+    searchInfo:
+    [
+      [
+        ["教师姓名","所在学校","注册时间"],
+        ["teacherName","schoolName","signinTime"],
+        ["example:田媛","example:华中师范大学","example:2016-7-1"]
+      ],
+      [
+        ["课堂代码","课程ID","注课程名"],
+        ["courseCode","courseId","courseName"],
+        ["example:123","example:123","example:大学语文"]
+      ],
+      [
+        ["学校名","所在地区","注用户数"],
+        ["schoolName","area","userCount"],
+        ["example:华中师范大学","example:武汉","example:2100"]
+      ]
+    ]
 };
 $(function() {
     newTable($("table[id=table" + page.curTableNum + "]" + " tbody"), res[page.curTableNum - 1], page.operater, page.operater2);
@@ -146,13 +163,15 @@ function wModalbtnClick() {
             var dataArr = objToArr(dataObj);
             var $tr = $("<tr></tr>");
             for (var i = 0; i < thsCount; i++) {
+
                 var $td = $("<td></td>");
                 var $input = $("<input type='text' class='form-control'/>");
                 $input.attr('value', dataArr[i]);
                 $td.html($input);
                 $tr.append($td);
+
             }
-            Mbody.append($tr);
+             Mbody.append($tr);
             //在模态框结尾添加保存按钮
             var MSBtn=$(".modal-footer").find("button:contains(Save)");
              MSBtn.remove();
@@ -161,26 +180,7 @@ function wModalbtnClick() {
         });
     });
 }
-/**
- * 信息表格切换效果
- */
-function tableChange() {
-    var nav = $("ul.nav li");
-    var tables = $("#table-container table");
-    var tableContainer = $("#table-container");
-    nav.each(function(i, navLi) {
-        $(navLi).click(function() {
-            $(this).addClass("active").siblings().removeClass("active");
-            var curIndex = $(this).index();
-            var curTbody = "#table" + (curIndex + 1) + " tbody";
-            var requireDta = res[curIndex];
-            newTable($(curTbody), requireDta, page.operater,page.operater2);
-            tables.eq(curIndex).removeClass('hide').siblings().addClass('hide');
-            page.curTableNum = curIndex + 1;
-        });
-    });
 
-}
 /**
  * 搜索框响应效果
  */
@@ -299,3 +299,41 @@ function objToArr(obj) {
     });
     return newArr;
 }
+/**
+ * 信息表格切换效果
+ */
+function tableChange() {
+    var nav = $("ul.nav li");
+    var tables = $("#table-container table");
+    var tableContainer = $("#table-container");
+    nav.each(function(i, navLi) {
+        $(navLi).click(function() {
+            $(this).addClass("active").siblings().removeClass("active");
+            var curIndex = $(this).index();
+            var curTbody = "#table" + (curIndex + 1) + " tbody";
+            var requireDta = res[curIndex];
+            newTable($(curTbody), requireDta, page.operater,page.operater2);
+            tables.eq(curIndex).removeClass('hide').siblings().addClass('hide');
+            page.curTableNum = curIndex + 1;
+            var selectInfoArray = getSelectInfo(curIndex);
+            showSelectItem(selectInfoArray);
+
+        });
+    });
+
+}
+/**
+ * 创建从三维数组中返回tag对应select数据一维数组
+ */
+ function getSelectInfo(tagIndex){
+    return page.searchInfo[tagIndex][0];
+ }
+ /**
+  * 将一维数组中各项对应显示在select选项中
+  */
+  function showSelectItem(selectInfoArray){
+      var options = $("#searchSelect").children('option');
+      for(var i=0;i<options.length;i++){
+        options.eq(i).text(selectInfoArray[i]);
+      }
+  }
