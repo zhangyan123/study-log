@@ -64,7 +64,7 @@ function bindThSortEvent(){
        * 增加排序toggle事件
        */
       var thIndex =$(this).index();
-      // var thSortType = $(this).attr("type");
+      var isNumber =($(this).attr("type")==="number");
       //创建一个数组用来缓存正在处理的数据
       var tempArray=[];
       //获取当前表格的所有tr
@@ -74,34 +74,50 @@ function bindThSortEvent(){
         curTds.each(function(index,curTd){
           if(index===thIndex){
             tempArray.push($(curTds[index]).html()+".separator"+$(this).parent("tr").html());
+
           }
         });
       });
       //根据新数组第一项大小实现新数组排序
       if(sortflag===1){
-        for(var i=0;i<tempArray.length;i++){
+        /**
+         * 当thType为数字时使用下列排序
+         * @type {Number}
+         */
+          tempArray.sort( function(param1,param2){
+              //如果两个参数均为数字
+              if(isNumber){
+                var result=Number(param1.split(".separator")[0]) - Number(param2.split(".separator")[0]);
+                  if(result>0) return 1;
+                  if(result===0) return 0;
+                  if(result<0) return -1;
+              }else{
+                return param1.localeCompare(param2);
+              }
+          });
+        // for(var i=0;i<tempArray.length;i++){
+        //
+        //         for(var j=i+1;j<tempArray.length;j++){
+        //           if(tempArray[i].split(".separator")[0]-tempArray[j].split(".separator")[0]<0){
+        //             var temp=tempArray[i];
+        //             tempArray[i]=tempArray[j];
+        //             tempArray[j]=temp;
+        //           }
+        //         }
+        //
+        //     }
 
-                for(var j=i+1;j<tempArray.length;j++){
-                  if(tempArray[i].split(".separator")[0]-tempArray[j].split(".separator")[0]<0){
-                    var temp=tempArray[i];
-                    tempArray[i]=tempArray[j];
-                    tempArray[j]=temp;
-                  }
-                }
+            /**
+             * 当thType为字符串时使用下列排序
+             * @type {String}
+             */
 
-            }
+             /**
+              * 当thType为时间时使用下列排序
+              * @type {Time}
+              */
       }else{
-         for(var i=0;i<tempArray.length;i++){
-
-                for(var j=i+1;j<tempArray.length;j++){
-                  if(tempArray[i].split(".separator")[0]-tempArray[j].split(".separator")[0]){
-                    var temp=tempArray[i];
-                    tempArray[i]=tempArray[j];
-                    tempArray[j]=temp;
-                  }
-                }
-
-            }
+         tempArray.reverse();
       }
 
     //用新数组中的行数据替换掉原来表格的数据
@@ -424,3 +440,31 @@ function tableChange() {
      $("#keyword").attr("placeholder",$(this).find(":selected").attr("example"));
    });
  }
+ /**
+   * 比较函数
+   * @param {Object} param1 要比较的参数1
+            * @param {Object} param2 要比较的参数2
+            * @return {Number} 如果param1 > param2 返回 1
+            *                     如果param1 == param2 返回 0
+            *                     如果param1 < param2 返回 -1
+            */
+           function compareFunc(param1,param2){
+              //如果两个参数均为字符串类型
+              if(typeof param1.split(".separator")[0] == "string" && typeof param2.split(".separator")[0] == "string"){
+                  return param1.split(".separator")[0].localeCompare(param2.split(".separator")[0]);
+              }
+              //如果参数1为数字，参数2为字符串
+              if(typeof param1.split(".separator")[0] == "number" && typeof param2.split(".separator")[0] == "string"){
+                  return -1;
+              }
+              //如果参数1为字符串，参数2为数字
+              if(typeof param1.split(".separator")[0] == "string" && typeof param2.split(".separator")[0] == "number"){
+                  return 1;
+              }
+              //如果两个参数均为数字
+              if(typeof param1.split(".separator")[0] == "number" && typeof param2.split(".separator")[0] == "number"){
+                  if(param1.split(".separator")[0] - param2.split(".separator")[0]>0) return 1;
+                  if(param1.split(".separator")[0] === param2.split(".separator")[0]) return 0;
+                  if(param1.split(".separator")[0] - param2.split(".separator")[0]<0) return -1;
+              }
+          }
