@@ -4,12 +4,116 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-#rowH	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^#rowH{$/;"	function	line:1
-ul .nav-tags	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^ul .nav-tags{$/;"	function	line:4
-#info-search	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^#info-search{$/;"	function	line:9
-#info-search :first-child	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^#info-search :first-child{$/;"	function	line:16
-.container-fluid	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^.container-fluid{$/;"	function	line:19
-.table-container	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^.table-container{$/;"	function	line:22
-.btnStyle	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^.btnStyle{$/;"	function	line:27
-.hide	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^.hide{$/;"	function	line:30
-.container-fluid	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/css/user.css	/^.container-fluid{$/;"	function	line:33
+html	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^<html lang="en">$/;"	function	line:2
+head	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^<head>$/;"	function	line:3
+meta	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <meta charset="UTF-8">$/;"	function	line:4
+meta	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <meta name="viewport" content="width=device-width, initial-scale=1.0">$/;"	function	line:5
+meta	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <meta http-equiv="X-UA-Compatible" content="ie=edge">$/;"	function	line:6
+link	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <link rel="stylesheet" href="css\/bootstrap.css" media="screen" title="no title">$/;"	function	line:7
+link	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <link rel="stylesheet" href="css\/user.css" media="screen" title="no title">$/;"	function	line:8
+script	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <script type="text\/javascript"src="js\/resource.js">$/;"	function	line:9
+script	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <script type="text\/javascript" src="js\/jquery.js"><\/script>$/;"	function	line:12
+script	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <script type="text\/javascript" src="js\/bootstrap.js">$/;"	function	line:13
+title	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <title>teacher-map<\/title>$/;"	function	line:15
+script	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <script type="text\/javascript" src="js\/teacher-map.js"><\/script>$/;"	function	line:17
+body	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^<body>$/;"	function	line:21
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <div class="container-fluid">$/;"	function	line:23
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^    <div class="row" id="rowH">$/;"	function	line:25
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="col-xs-4">$/;"	function	line:27
+ul	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <ul class="nav nav-tabs" role="tablist">$/;"	function	line:28
+li	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <li role="presentation" class="active"><a href="javascript:void(0)">教师信息<\/a><\/li>$/;"	function	line:29
+li	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <li role="presentation" ><a href="javascript:void(0)">课堂信息<\/a><\/li>$/;"	function	line:30
+li	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <li role="presentation"><a href="javascript:void(0)">学校信息<\/a><\/li>$/;"	function	line:31
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <div class="col-xs-8" id="info-search">$/;"	function	line:39
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <div class="form-group">$/;"	function	line:40
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^         <div class="input-group col-xs-12">$/;"	function	line:41
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^         <div class="input-group-btn">$/;"	function	line:42
+select	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^            <select rel="searchInfo"name="type" class="form-control" style="width: auto;" id="searchSelect">$/;"	function	line:43
+option	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <option value="teacherName" example="example：田媛">教师姓名<\/option>$/;"	function	line:44
+option	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <option value="schoolName" example="example: 华师">所在学校<\/option>$/;"	function	line:45
+option	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <option value="signinTime" example="example:2016-7-1">注册时间<\/option>$/;"	function	line:46
+input	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <input type="text" name="keyword" id="keyword" class="form-control" placeholder="输入关键字">$/;"	function	line:49
+span	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <span class="input-group-btn">$/;"	function	line:50
+button	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^            <button class="btn" id="search_submit" type="submit" >搜索<\/button>$/;"	function	line:51
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^    <div  class="row">$/;"	function	line:61
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="col" id="table-container">$/;"	function	line:62
+table	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <table class="table table-striped table-bordered table-hover table-condensed table-responsive" id="table1">$/;"	function	line:63
+thead	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <thead>$/;"	function	line:64
+tr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^            <tr>$/;"	function	line:65
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:66
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:68
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:71
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:73
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:75
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:77
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>最后一次使用时间&nbsp;&nbsp;$/;"	function	line:79
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:80
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:82
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:85
+tbody	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <tbody>$/;"	function	line:91
+tr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^            <tr>$/;"	function	line:92
+td	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <td>$/;"	function	line:93
+td	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <td>$/;"	function	line:96
+td	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <td>$/;"	function	line:99
+td	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <td>$/;"	function	line:102
+td	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <td>$/;"	function	line:105
+button	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">$/;"	function	line:107
+table	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <table class="table table-striped table-bordered table-hover table-condensed table-responsive hide" id="table2">$/;"	function	line:116
+thead	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <thead>$/;"	function	line:117
+tr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^            <tr>$/;"	function	line:118
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:119
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:121
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:124
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:126
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:128
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:130
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>最后一次使用时间&nbsp;&nbsp;$/;"	function	line:132
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:133
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:135
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:138
+tbody	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <tbody>$/;"	function	line:143
+table	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <table class="table table-striped table-bordered table-hover table-condensed table-responsive hide" id="table3">$/;"	function	line:147
+thead	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <thead>$/;"	function	line:148
+tr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^            <tr>$/;"	function	line:149
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:150
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:152
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:155
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:157
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:159
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:161
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>活跃课堂&nbsp;&nbsp;$/;"	function	line:163
+a	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"> <\/span><\/a>$/;"	function	line:164
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:166
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^              <th>$/;"	function	line:169
+tbody	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <tbody>$/;"	function	line:174
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^    <div class="row">$/;"	function	line:182
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="col-xs-3">$/;"	function	line:183
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="col-xs-1">$/;"	function	line:186
+select	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <select class="multiple form-control"rel="rows" name="rows">$/;"	function	line:187
+option	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <option value="1">1<\/option>$/;"	function	line:188
+option	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <option value="2">2<\/option>$/;"	function	line:189
+option	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <option value="3">3<\/option>$/;"	function	line:190
+option	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <option value="4">4<\/option>$/;"	function	line:191
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="col-xs-5">$/;"	function	line:194
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <div class="btn-group" id="pageTag">$/;"	function	line:195
+button	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <button type="button" class="btn btn-default btn-hover">prev<\/button>$/;"	function	line:196
+button	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <button type="button" class="btn btn-default">1<\/button>$/;"	function	line:197
+button	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <button type="button" class="btn btn-default">next<\/button>$/;"	function	line:198
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">$/;"	function	line:208
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^  <div class="modal-dialog">$/;"	function	line:209
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^    <div class="modal-content">$/;"	function	line:210
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="modal-header">$/;"	function	line:211
+button	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;<\/span><span class="sr-only">Close<\/span><\/button>$/;"	function	line:212
+h	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <h4 class="modal-title" id="myModalLabel">课堂信息<\/h4>$/;"	function	line:213
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="modal-body">$/;"	function	line:215
+table	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <table class="table table-striped table-bordered table-hover table-condensed table-responsive">$/;"	function	line:216
+thead	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <thead>$/;"	function	line:217
+tr	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^            <tr>$/;"	function	line:218
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^               <th>创建时间<\/th>$/;"	function	line:221
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^               <th>学生数量<\/th>$/;"	function	line:222
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^               <th>问题数量<\/th>$/;"	function	line:223
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^               <th>题组数量<\/th>$/;"	function	line:224
+th	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^               <th>签到次数<\/th>$/;"	function	line:225
+tbody	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^          <tbody>$/;"	function	line:228
+div	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^      <div class="modal-footer">$/;"	function	line:234
+button	/Users/zhangyan/Desktop/study-log/虚拟动态生成表格及翻页功能/index.html	/^        <button type="button" class="btn btn-default" data-dismiss="modal">Close<\/button>$/;"	function	line:235

@@ -188,12 +188,12 @@ function topSearchInput() {
     var search = $("#keyword");
     search
         .focus(function() {
-            if (search.attr("value") === "输入关键字")
-                search.attr('value', '');
+            if (search.attr("placeholder") === "输入关键字")
+                search.attr('placeholder', '');
         })
         .blur(function() {
-            if (search.attr("value") === '') {
-                search.attr('value',"输入关键字");
+            if (search.attr("placeholder") === '') {
+                search.attr('placeholder',"输入关键字");
             }
         });
 }
@@ -226,6 +226,9 @@ function newTable(oldTbody, data, operater, operater2) {
     pageNumClick();
     rModalbtnClick();
     wModalbtnClick();
+    $("#keyword").attr("placeholder","输入关键字");
+    searchToGo();
+
 
 }
 /**
@@ -323,10 +326,10 @@ function tableChange() {
 
 }
 /**
- * 创建从三维数组中返回tag对应select数据一维数组
+ * 创建从三维数组中返回tag对应select数据二维数组
  */
  function getSelectInfo(tagIndex){
-    return page.searchInfo[tagIndex][0];
+    return page.searchInfo[tagIndex];
  }
  /**
   * 将一维数组中各项对应显示在select选项中
@@ -334,6 +337,20 @@ function tableChange() {
   function showSelectItem(selectInfoArray){
       var options = $("#searchSelect").children('option');
       for(var i=0;i<options.length;i++){
-        options.eq(i).text(selectInfoArray[i]);
+        var curOption=options.eq(i);
+        curOption.text(selectInfoArray[0][i]);
+        curOption.val(selectInfoArray[1][i]);
+        curOption.attr("example",selectInfoArray[2][i]);
+
       }
   }
+/**
+ * 根据select.val()筛选符合条件的信息进行展示
+ */
+ function searchToGo(){
+   var searchInfo = $("select[rel=searchInfo]");
+   searchInfo.change(function(){
+     var searchInfoVal = $(this).val();
+     $("#keyword").attr("placeholder",$(this).find(":selected").attr("example"));
+   });
+ }

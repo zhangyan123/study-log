@@ -40,13 +40,13 @@
           <div class="form-group">
          <div class="input-group col-xs-12">
          <div class="input-group-btn">
-            <select name="type" class="form-control" style="width: auto;" id="searchSelect">
-                <option value="teacherName">教师姓名</option>
-                <option value="schoolName">所在学校</option>
-                <option value="signinTime">注册时间</option>
+            <select rel="searchInfo"name="type" class="form-control" style="width: auto;" id="searchSelect">
+                <option value="teacherName" example="example：田媛">教师姓名</option>
+                <option value="schoolName" example="example: 华师">所在学校</option>
+                <option value="signinTime" example="example:2016-7-1">注册时间</option>
             </select>
         </div>
-        <input type="text" name="keyword" id="keyword" class="form-control" value="输入关键字">
+        <input type="text" name="keyword" id="keyword" class="form-control" placeholder="输入关键字">
         <span class="input-group-btn">
             <button class="btn" id="search_submit" type="submit" >搜索</button>
         </span>
