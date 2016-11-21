@@ -39,6 +39,10 @@ function initEvent() {
     topSearchInput();
     getSelectedRowsLimit();
       $("#keyword").attr("placeholder",$("#searchSelect :selected").attr("example"));
+      $("#table-container th").click(function(){
+        $(this).find("a span").toggleClass("glyphicon glyphicon-chevron-up");
+          $(this).find("a span").toggleClass("glyphicon glyphicon-chevron-down");
+      });
 }
 /**
  * 根据下拉列表选择控制每页行数
