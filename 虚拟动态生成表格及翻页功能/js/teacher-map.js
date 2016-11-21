@@ -10,14 +10,14 @@ var page = {
     searchInfo:
     [
       [
-        ["教师姓名","所在学校","注册时间"],
-        ["teacherName","schoolName","signinTime"],
-        ["example:田媛","example:华中师范大学","example:2016-7-1"]
+        ["教师姓名","课程ID","最近使用时间"],
+        ["teacherName","courseId","lastSigninTime"],
+        ["example:田媛","example:123","example:2016-7-1"]
       ],
       [
-        ["课堂代码","课程ID","注课程名"],
-        ["courseCode","courseId","courseName"],
-        ["example:123","example:123","example:大学语文"]
+        ["课堂代码","课程ID","最近使用时间"],
+        ["courseCode","courseId","lastSigninTime"],
+        ["example:123","example:123","example:2016-7-1"]
       ],
       [
         ["学校名","所在地区","注用户数"],
@@ -40,7 +40,7 @@ function initEvent() {
     getSelectedRowsLimit();
     bindThSortEvent();
       $("#keyword").attr("placeholder",$("#searchSelect :selected").attr("example"));
-
+    searchToGo();
 }
 /**
  * 绑定th点击触发的排序事件
@@ -314,8 +314,6 @@ function newTable(oldTbody, data, operater, operater2) {
     pageNumClick();
     rModalbtnClick();
     wModalbtnClick();
-    searchToGo();
-
 }
 /**
  * 将每一位老师的信息添加进一行并返回行
@@ -436,35 +434,11 @@ function tableChange() {
  function searchToGo(){
    var searchInfo = $("select[rel=searchInfo]");
    searchInfo.change(function(){
-     var searchInfoVal = $(this).val();
      $("#keyword").attr("placeholder",$(this).find(":selected").attr("example"));
    });
+   var searchBtn = $("#search_submit");
+   searchBtn.click(function(){
+    var searchInfoVal = $(this).val();
+    var keyword = $("#keyword").val();
+   });
  }
- /**
-   * 比较函数
-   * @param {Object} param1 要比较的参数1
-            * @param {Object} param2 要比较的参数2
-            * @return {Number} 如果param1 > param2 返回 1
-            *                     如果param1 == param2 返回 0
-            *                     如果param1 < param2 返回 -1
-            */
-           function compareFunc(param1,param2){
-              //如果两个参数均为字符串类型
-              if(typeof param1.split(".separator")[0] == "string" && typeof param2.split(".separator")[0] == "string"){
-                  return param1.split(".separator")[0].localeCompare(param2.split(".separator")[0]);
-              }
-              //如果参数1为数字，参数2为字符串
-              if(typeof param1.split(".separator")[0] == "number" && typeof param2.split(".separator")[0] == "string"){
-                  return -1;
-              }
-              //如果参数1为字符串，参数2为数字
-              if(typeof param1.split(".separator")[0] == "string" && typeof param2.split(".separator")[0] == "number"){
-                  return 1;
-              }
-              //如果两个参数均为数字
-              if(typeof param1.split(".separator")[0] == "number" && typeof param2.split(".separator")[0] == "number"){
-                  if(param1.split(".separator")[0] - param2.split(".separator")[0]>0) return 1;
-                  if(param1.split(".separator")[0] === param2.split(".separator")[0]) return 0;
-                  if(param1.split(".separator")[0] - param2.split(".separator")[0]<0) return -1;
-              }
-          }
