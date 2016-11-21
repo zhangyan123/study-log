@@ -38,6 +38,7 @@ function initEvent() {
     tableChange();
     topSearchInput();
     getSelectedRowsLimit();
+      $("#keyword").attr("placeholder",$("#searchSelect :selected").attr("example"));
 }
 /**
  * 根据下拉列表选择控制每页行数
@@ -226,9 +227,7 @@ function newTable(oldTbody, data, operater, operater2) {
     pageNumClick();
     rModalbtnClick();
     wModalbtnClick();
-    $("#keyword").attr("placeholder","输入关键字");
     searchToGo();
-
 
 }
 /**
@@ -320,7 +319,7 @@ function tableChange() {
             page.curTableNum = curIndex + 1;
             var selectInfoArray = getSelectInfo(curIndex);
             showSelectItem(selectInfoArray);
-
+              $("#keyword").attr("placeholder",$("#searchSelect :selected").attr("example"));
         });
     });
 
