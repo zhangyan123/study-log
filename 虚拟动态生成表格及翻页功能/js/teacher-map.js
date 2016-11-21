@@ -440,5 +440,13 @@ function tableChange() {
    searchBtn.click(function(){
     var searchInfoVal = $(this).val();
     var keyword = $("#keyword").val();
+    createSearchTable(searchInfoVal,keyword);
    });
  }
+/**
+ * 根据筛选条件，表格，列名及关键字筛选符合条件的tr，进行展示
+ */
+function createSearchTable(requireItem,keyword){
+var data=res[page.curTableNum-1];
+
+}

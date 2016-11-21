@@ -5,8 +5,8 @@
 /**
  * 教师数据构造函数
  */
-function teacher(name, courseId, courseName, last_login_time, course_information) {
-  this.name=name;
+function teacher(teacherName, courseId, courseName, last_login_time, course_information) {
+  this.teacherName=teacherName;
   this.courseId=courseId;
   this.courseName=courseName;
   this.last_login_time=last_login_time;
