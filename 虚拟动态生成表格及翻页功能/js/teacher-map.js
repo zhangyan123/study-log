@@ -273,7 +273,9 @@ function wModalbtnClick() {
  * 搜索框响应效果
  */
 function topSearchInput() {
+  var validTrs;
     var search = $("#keyword");
+    var searchBtn = $("#search_submit");
     search
         .focus(function() {
             if (search.attr("placeholder") === "输入关键字")
@@ -283,7 +285,24 @@ function topSearchInput() {
             if (search.attr("placeholder") === '') {
                 search.attr('placeholder',"输入关键字");
             }
+        })
+        .keyup(function(e){
+          if (search.val()=== '') {
+            $("table tbody tr").show().css('background',"transparent");
+          }else{
+            validTrs = $("table tbody tr").show().css('background',"transparent")
+                  .filter(":contains('"+($(this).val())+"')");
+            validTrs.css("background","#ccc");
+            validTrs.insertBefore('table tbody tr:first');
+          }
+          if(e.keyCode==13){
+            searchBtn.trigger('click');
+          }
         });
+    searchBtn.click(function(){
+      $("table tbody tr").hide();
+      validTrs.show();
+    });
 }
 /**
  * 根据传入数据res创建新表格并返回tbody
