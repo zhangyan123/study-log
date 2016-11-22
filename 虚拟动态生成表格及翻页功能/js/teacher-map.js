@@ -314,6 +314,7 @@ function newTable(oldTbody, data, operater, operater2) {
     pageNumClick();
     rModalbtnClick();
     wModalbtnClick();
+    oldTbody.parent("table").find("th a span").attr("class","glyphicon glyphicon-chevron-up");
 }
 /**
  * 将每一位老师的信息添加进一行并返回行
