@@ -29,7 +29,7 @@
     margin-left: 122px;
     margin-right:10px;
     display:inline-block;
-    background:url("./images/play.png") no-repeat;
+    background:url("./images/pause.png") no-repeat;
     width:16px;
     height:16px;
 }
@@ -67,7 +67,6 @@
     position: relative;
 }
 .cd {
-    display: none;
     position: relative;
     box-sizing: border-box;
     width: 81px;
