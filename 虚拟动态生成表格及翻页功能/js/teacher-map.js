@@ -40,7 +40,6 @@ function initEvent() {
     getSelectedRowsLimit();
     bindThSortEvent();
       $("#keyword").attr("placeholder",$("#searchSelect :selected").attr("example"));
-    searchToGo();
 }
 /**
  * 绑定th点击触发的排序事件
@@ -448,25 +447,25 @@ function tableChange() {
 
       }
   }
-/**
- * 根据select.val()筛选符合条件的信息进行展示
- */
- function searchToGo(){
-   var searchInfo = $("select[rel=searchInfo]");
-   searchInfo.change(function(){
-     $("#keyword").attr("placeholder",$(this).find(":selected").attr("example"));
-   });
-   var searchBtn = $("#search_submit");
-   searchBtn.click(function(){
-    var searchInfoVal = $(this).val();
-    var keyword = $("#keyword").val();
-    createSearchTable(searchInfoVal,keyword);
-   });
- }
-/**
- * 根据筛选条件，表格，列名及关键字筛选符合条件的tr，进行展示
- */
-function createSearchTable(requireItem,keyword){
-var data=res[page.curTableNum-1];
-
-}
+// /**
+//  * 根据select.val()筛选符合条件的信息进行展示
+//  */
+//  function searchToGo(){
+//    var searchInfo = $("select[rel=searchInfo]");
+//    searchInfo.change(function(){
+//      $("#keyword").attr("placeholder",$(this).find(":selected").attr("example"));
+//    });
+//    var searchBtn = $("#search_submit");
+//    searchBtn.click(function(){
+//     var searchInfoVal = $(this).val();
+//     var keyword = $("#keyword").val();
+//     createSearchTable(searchInfoVal,keyword);
+//    });
+//  }
+// /**
+//  * 根据筛选条件，表格，列名及关键字筛选符合条件的tr，进行展示
+//  */
+// function createSearchTable(requireItem,keyword){
+// var data=res[page.curTableNum-1];
+//
+// }
