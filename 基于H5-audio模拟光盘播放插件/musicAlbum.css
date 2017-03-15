@@ -1,7 +1,7 @@
 /*音乐播放组件*/
 .media {
     margin:0 auto;
-    width: 500px;
+    width: 600px;
     /* overflow:hidden; */
 }
 /* 进度条 */  
@@ -29,7 +29,7 @@
     margin-left: 122px;
     margin-right:10px;
     display:inline-block;
-    background:url("./images/pause.png") no-repeat;
+    background:url("./images/play.png") no-repeat;
     width:16px;
     height:16px;
 }
@@ -47,7 +47,7 @@
     height:16px;
 }
 .soundCtrl{
-  display: none;
+  margin-right: 100px;
   float:right;
   z-index: 100;
 }
@@ -59,7 +59,7 @@
     height:22px; 
 }
 .cd-container {
-    overflow: hidden;
+    display: inline-block;
     background: url("./images/cdbackground.png") -79px -60px no-repeat;
     background-size: 753px;
     width: 600px;
@@ -130,7 +130,7 @@
     opacity: 0;
     left: -220px;
     font-size: 40px;
-    animation: music 2.5s infinite ease;
+    /*animation: music 2.5s infinite ease;*/
 }
 .music:after{
     content: "♪";
@@ -139,8 +139,12 @@
     opacity: 0;
     left: -120px;
     font-size: 40px;
-    animation: music 3.3s infinite ease;
-    -webkit-animation: music 3.3s infinite ease;
+    /*animation: music 3.3s infinite ease;*/
+    /*-webkit-animation: music 3.3s infinite ease;*/
+}
+.music.rotate:before,.music.rotate:after{
+      animation: music 3.3s infinite ease;
+     -webkit-animation: music 3.3s infinite ease;
 }
 @-webkit-keyframes music {
   0% {

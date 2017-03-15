@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./musicAlbum.css">
+</head>
+
+<body>
+    <div class="media" data-setting={ "preload": "true", "loop": "loop", "autoplay": "autoplay"}>
+        <audio>
+            <!--此处添加用户自己的音乐-->
+            <source src="./music/lemonTree.mp3" type="audio/mp3" />
+        </audio>
+    </div>
+
+    <script src="./lib/jquery-3.1.1.js"></script>
+    <script src="./musicAlbum.js"></script>
+    <script>
+        Album.init($(".media"));
+    </script>
+</body>
+
+</html>
