@@ -5,7 +5,8 @@
         this.setting = {
             preload: "true",
             loop: "loop",
-            autoplay: "false"
+            autoplay: "false",
+            CDpattern:"true"
         };
         this.media = mediaDiv;
         this.audio = mediaDiv.find("audio");
