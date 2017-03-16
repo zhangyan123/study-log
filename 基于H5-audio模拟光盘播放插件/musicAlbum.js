@@ -5,26 +5,18 @@
         this.setting = {
             preload: "true",
             loop: "loop",
-            autoplay: "true"
+            autoplay: "false"
         };
         this.media = mediaDiv;
         this.audio = mediaDiv.find("audio");
         //扩展setting对象的内容，当用户设置了对应项是进行覆盖并修改setting的内容
-        $.extend(this.setting, this.getSetting());
+        $.extend(this.setting,this.getSetting());
         this.renderDom();
         this.bindEvents();
-        this.cdAutoRoll();
     };
 
     Album.prototype = {
-        //当用户要求页面加载时自动播放音乐时，旋转光盘
-        cdAutoRoll: function () {
-            if (this.audio[0].played) {
-                $(".play").css("background", "url('./images/pause.png') no-repeat");
-                $("div.cd,div.music").addClass("rotate");
 
-            }
-        },
         //audio.duration值为秒数，需制造一个方法将其转化为时间格式
         timeToStr: function (time) {
             var m = 0,
@@ -51,19 +43,26 @@
                 $('.cur').text(timeToStr(currentTime));
             }, 1000);
             //触发播放暂停事件   
-            $('.play').on('click', function () {
+            $('.play').on('click', function (e) {
                 if (audio.paused) {
                     audio.play();
-                    $(".play").css("background", "url('./images/pause.png') no-repeat");
-                    $("div.cd,div.music").addClass("rotate");
-
-                    $(".cd").css("display", "block");
+                  console.log(!$(e.target).hasClass("CDpattern"));
+                    if(!$(e.target).hasClass("CDpattern")){
+                        $(this).css("background","url('./images/pause.png') no-repeat");
+                    }else{
+                        $("div.cd,div.music").addClass("rotate");
+                        $(".cd").css("display", "block");
+                    }
                 } else {
                     audio.pause();
-                    $(".play").css("background", "url('./images/play.png') no-repeat");
-                    $("div.cd,div.music").removeClass("rotate");
-                    $(".cd").css("display", "none");
-
+                   console.log(!$(e.target).hasClass("CDpattern"));
+                   
+                    if(!$(this).hasClass("CDpattern")){
+                    $(this).css("background","url('./images/play.png') no-repeat")
+                    }else{
+                        $("div.cd,div.music").removeClass("rotate");
+                        $(".cd").css("display", "none");
+                    }
                 }
             });
             //监听滑块，拖动以设置当下播放位置  
@@ -72,9 +71,6 @@
                 $(".range").val(this.value);
             });
 
-            $("#cd-model").on("click", function () {
-                $('.play').trigger("click");
-            });
             $(".cd").on("click", function () {
                 $(".play").trigger("click");
             });
@@ -89,11 +85,9 @@
             });
             $("#upVol").click(function () {
                 audio.volume = (audio.volume + 0.1) > 0.9 ? 1 : (audio.volume + 0.1);
-                console.log(audio.volume);
             });
             $("#downVol").click(function () {
                 audio.volume = (audio.volume - 0.1) < .1 ? 0 : (audio.volume - 0.1);
-                console.log(audio.volume);
             });
 
         },
@@ -110,26 +104,45 @@
         renderDom: function () {
             var setting = this.setting;
             var dom =
-                "<span class='play'></span><span class='cur'>00:00</span><input type='range' min=0 max=100 class='range' value=0>" +
-                "<span class='max'>音频长</span>" +
-                "<span id='soundCtrl'></span>" +
+                "<span class='play CDpattern'></span><span class='cur'>00:00</span><input type='range' min=0 max=100 class='range' value=0>" +
+                "<span class='max'>00:00</span>" +
                 "<div class='soundCtrl'>" +
                 "<span id='mute'></span>" +
                 "<input type='button' value='+' id='upVol' />音量<input type='button' value='-' id='downVol'>" +
-                "<span id='cd-model' title='开启CD模拟模式'></span>" +
                 "</div>" +
                 "<div class='cd-container'>" +
                 "<div class='cd'></div>" +
                 "<div class='music'></div>" +
                 "</div>";
+            if(setting.CDpattern==="false"){
+                dom =
+                "<span class='play'></span><span class='cur'>00:00</span><input type='range' min=0 max=100 class='range' value=0>" +
+                "<span class='max'>00:00</span>" +
+                "<div class='soundCtrl'>" +
+                "<span id='mute'></span>" +
+                "<input type='button' value='+' id='upVol' />音量<input type='button' value='-' id='downVol'>" +
+                "</div>";
+            }
             this.media.append($(dom));
             this.audio.attr({
                 "preload": setting.preload,
-                "loop": setting.loop
+                "loop": setting.loop,
             });
-            if (setting.autoplay === "true") {
-                this.audio.attr("autoplay");
+            if(setting.autoplay==="false"){
+                this.audio.removeAttr("autoplay");
+                this.audio[0].pause();
+                $("div.cd,div.music").removeClass("rotate");
+                $(".cd").hide();
+            }else{
+                if(setting.CDpattern==="false"){
+                    $(".play").css("background","url('./images/pause.png') no-repeat");
+                }else{
+                   $("div.cd,div.music").addClass("rotate");
+                   $(".cd").show();
+                }
+               
             }
+            
         }
 
     };
