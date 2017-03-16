@@ -109,7 +109,7 @@
                 "<span class='max'>00:00</span>" +
                 "<div class='soundCtrl'>" +
                 "<span id='mute'></span>" +
-                "<input type='button' value='+' id='upVol' />音量<input type='button' value='-' id='downVol'>" +
+                "<input type='button' value='-' id='downVol' />音量<input type='button' value='+' id='upVol'>" +
                 "</div>" +
                 "<div class='cd-container'>" +
                 "<div class='cd'></div>" +
@@ -121,7 +121,7 @@
                 "<span class='max'>00:00</span>" +
                 "<div class='soundCtrl'>" +
                 "<span id='mute'></span>" +
-                "<input type='button' value='+' id='upVol' />音量<input type='button' value='-' id='downVol'>" +
+                "<input type='button' value='-' id='downVol' />音量<input type='button' value='+' id='upVol'>" +
                 "</div>";
             }
             this.media.append($(dom));
